@@ -1,0 +1,18 @@
+/*
+ * Font face
+ * $f-family = font-family / $f-path = relative path of the font
+ * $f-weight = font-weight / $f-style = font-style
+ */
+@mixin fontFace($f-family , $f-path, $f-weight : normal , $f-style : normal){
+   @font-face {
+      font-family: #{$f-family};
+      src: url('#{$f-path}.eot');
+      src: url('#{$f-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$f-path}.woff2') format('woff2'),
+           url('#{$f-path}.woff') format('woff'),
+           url('#{$f-path}.ttf') format('truetype'),
+           url("#{$f-path}.svg#${$f-family}") format('svg');
+      font-weight: $f-weight !important;
+      font-style: $f-style !important;
+   }
+}

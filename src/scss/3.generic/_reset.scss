@@ -1,0 +1,13 @@
+* {
+  @include boxSizing();
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $bg-default;
+  font-family: $font-family-default;
+  font-weight: 300;
+}

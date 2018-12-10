@@ -1,0 +1,11 @@
+/*
+ * CSS calculation method
+ * $prop = property / $calc = expression
+ */
+@mixin calc($prop, $calc) {
+   #{$prop} : -webkit-calc(#{$calc});
+   #{$prop} : -moz-calc(#{$calc});
+   #{$prop} : -ms-calc(#{$calc});
+   #{$prop} : -o-calc(#{$calc});
+   #{$prop} : calc(#{$calc});
+}

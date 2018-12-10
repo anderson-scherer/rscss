@@ -1,0 +1,26 @@
+/*
+ * Opacity
+ * $v = opacity value
+ * @example 0.8 or .8
+ * @result
+ * -webkit-opacity: .5;
+ * -moz-opacity: .5;
+ * -ms-opacity: .5;
+ * -o-opacity: .5;
+ * opacity: .5;
+ * -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+ * filter: alpha(opacity=50);
+ */
+
+ @mixin opacity($v){
+   -webkit-opacity : $v;
+      -moz-opacity : $v;
+       -ms-opacity : $v;
+        -o-opacity : $v;
+           opacity : $v;
+
+   // older versions for IE
+   $ie : $v * 100;
+   -ms-filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie+")";
+   filter : alpha(opacity=$ie);
+}

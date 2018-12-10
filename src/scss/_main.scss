@@ -1,0 +1,84 @@
+
+/*
+ * 1.tools
+ *  Any non-rendering / config code (for example, animated image frame) and functions is here
+ *  $color-ui: #BADA55;
+ *  $spacing-unit: 10px;
+ */
+
+@import '1.tools/_mixins.scss';
+
+/*
+ * 2.settings
+ *  used with preprocessors and contain font, colors definitions, etc.
+ *  @mixin font-brand() {
+ *    fotn-family: "UI font", sans-serif;
+ *    font-weigth: 400;
+ *  }
+ */
+
+@import '2.settings/*.scss';
+
+/*
+ * 3.generic
+ * reset and/or normalize styles, box-sizing definition, etc.
+ * This is the first layer which generates actual CSS.
+ */
+
+@import '3.generic/*.scss';
+
+/*
+ * 4.base
+ * This layer is used to use the most basic part of elements. No IDs or
+ * classes here, just element selectors.
+ * div{
+ *   padding: 10px;
+ * }
+ */
+
+@import '4.base/*.scss';
+
+/*
+ * 5.objects
+ * class-based selectors which define undecorated design patterns,
+ * for example media object known from OOCSS
+ * Start with the prefix o-
+ * o-content{
+ *  width: 100%
+ *  height : auto;
+ * }
+ */
+
+@import '5.objects/*.scss';
+
+/*
+ * 6.components
+ * Elements of blocks with more specificities should be declared here.
+ * Start with the prefix c-
+ * c-accordion{
+ *   float: left;
+ * }
+ */
+
+@import '6.components/*.scss';
+
+/*
+ * 7.trumps
+ * This layer is responsible for the greater specificity of all,
+ * having its components up to! Important.
+ * Start with the prefix t-
+ * .t-hidden{
+ *   display: none;
+ *   visibility: hidden;
+ *  }
+ */
+
+@import '7.trumps/*.scss';
+
+/*
+ * 8.vendor
+ * Declared elements distributed by other developers,
+ * or that are requirements of some lib js
+ */
+
+@import '8.vendor/*.scss'

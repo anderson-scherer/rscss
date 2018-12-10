@@ -1,0 +1,11 @@
+/*
+ * Transition
+ * $tp = transition-property / $tdu =  transition-duration
+ * $ttf = transition-timing-function / $td = transition-delay
+ */
+@mixin transition($tp : all, $tdu : 100ms,$ttf : ease-in-out, $td: 0ms) {
+      -webkit-transition : $tp $tdu $ttf $td;
+         -moz-transition : $tp $tdu $ttf $td;
+           -o-transition : $tp $tdu $ttf $td;
+              transition : $tp $tdu $ttf $td;
+ }

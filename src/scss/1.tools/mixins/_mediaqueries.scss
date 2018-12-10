@@ -1,0 +1,37 @@
+/*
+ * Media Queries
+ * $media = Size breakpoint
+ * $min   = true(default) = min-width / false = max-width
+ * @exmaple
+ *
+ * @include mediaQueries(480px){
+ *  .teste{
+ *    @include size(300px);
+ *    margin: 0 auto;
+ *     background: green;
+ *  }
+ * }
+ *
+ * @include mediaQueries(px, false){
+ *   .teste{
+ *     @include size(100px);
+ *     margin: 0 auto;
+ *     background: green;
+ *  }
+ * }
+ */
+
+
+ @mixin mediaQuerie ($media, $type : min){
+
+   @if($type == max){
+      $media : $media - 1px;
+   }
+
+   @media (#{$type}-width : $media) {
+      @content;
+   }
+
+ }
+
+

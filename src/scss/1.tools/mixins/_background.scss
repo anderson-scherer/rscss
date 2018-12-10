@@ -1,0 +1,10 @@
+/* Viewing and configuring images in the background
+ * $s = background-size / $pos-{x,y} = background-position / background-repeat
+ * $clip = background-clip
+ */
+@mixin background($s : cover, $pos-x : center, $pos-y : center, $r : no-repeat, $clip : border-box) {
+    background-size     : $s;
+    background-position : #{$pos-x} #{$pos-y};
+    background-repeat   : $r;
+    background-clip     : $clip;
+}

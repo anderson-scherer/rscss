@@ -1,0 +1,8 @@
+/*
+ * Size of boxes width and height
+ * $w = whidth / $h = height
+ */
+@mixin size($w, $h : $w) {
+   width  : $w;
+   height : $h;
+ }

@@ -1,0 +1,8 @@
+/* Border-raius
+ * top-left | top-right | bottom-right | bottom-left
+ */
+@mixin borderRadius($tl : 6px, $tr : $tl, $br : $tl, $bl : $tl) {
+   -webkit-border-radius : $tl $tr $br $bl;
+      -moz-border-radius : $tl $tr $br $bl;
+            border-radius : $tl $tr $br $bl;
+}

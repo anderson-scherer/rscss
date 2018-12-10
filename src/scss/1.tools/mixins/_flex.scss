@@ -1,0 +1,19 @@
+/*
+ * Box Flex / Inline-flex {alfa 1.5.0}
+ * $d = display value (flex end inline-flex)
+ */
+@mixin flexBox($d : flex){
+
+   @if($d == flex){
+      display : -webkit-box;
+      display : -moz-box;
+      display : -ms-flexbox;
+      display : -webkit-flex;
+      display : flex;
+   } @else {
+      display : -webkit-inline-box;
+      display : -ms-inline-flexbox;
+      display : inline-flex;
+   }
+
+}

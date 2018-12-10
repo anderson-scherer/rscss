@@ -1,0 +1,11 @@
+/*
+ * The default html font size should be 62.5% = 13px
+ * $s = font-size / $l = line-height
+ * If it is not declared, line-height receives the value of font-size
+ */
+@mixin fontSize($f, $l : $f) {
+   font-size   : $f * 1px; // fallback
+   font-size   : $f * .1rem;
+   line-height : $l * 1px; // fallback
+   line-height : $l * .1rem;
+ }

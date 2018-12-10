@@ -1,0 +1,26 @@
+/*
+ * Keyframes
+ * $name = animation name
+ * @exmaple
+ * @include keyframes(example) {
+ *    0% { opacity: 1; }
+ *    90% { opacity: 0; }
+ * }
+ */
+ @mixin keyframes($name) {
+   @-webkit-keyframes #{$name} {
+       @content;
+   }
+   @-moz-keyframes #{$name} {
+       @content;
+   }
+   @-ms-keyframes #{$name} {
+       @content;
+   }
+   @-o-keyframes #{$name} {
+       @content;
+   }
+   @keyframes #{$name} {
+       @content;
+   }
+}

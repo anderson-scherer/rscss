@@ -1,0 +1,21 @@
+/* Box-shadow
+ * $t = top / $l = left / $b = blur / $c = color / $i inset
+ */
+@mixin boxShadow($t : 1px, $l : 1px, $b : 3px, $c : black, $i : false ) {
+   @if $i{
+      -webkit-box-shadow : inset $t $l $b $c;
+         -moz-box-shadow : inset $t $l $b $c;
+              box-shadow : inset $t $l $b $c;
+   }
+   @else {
+      -webkit-box-shadow : $t $l $b $c;
+         -moz-box-shadow : $t $l $b $c;
+              box-shadow : $t $l $b $c;
+   }
+}
+
+@mixin boxShadowNone() {
+   -webkit-box-shadow : none;
+      -moz-box-shadow : none;
+           box-shadow : none;
+}

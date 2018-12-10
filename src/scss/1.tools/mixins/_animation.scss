@@ -1,0 +1,31 @@
+
+/*
+ * animation
+ * $name = animation-name / $duration = animation-duration (1s or 100ms)
+ * $timing = animation-timing-function / $delay = animation-delay (1s or 100ms)
+ * $iteration = animation-iteration-count / $direction = animation-direction
+ * @example
+ * .element {
+ *   width: 100px;
+ *   height: 100px; *
+ *   @include animation(example, 10s, linear, 2s, 3, alternate);
+ * }
+ */
+ @mixin animation($name , $duration : 1s, $timing : ease, $delay : 0s, $iteration : 1 , $direction : normal) {
+   -webkit-animation : #{$name} #{$duration} #{$timing} #{$delay} #{$iteration} #{$direction};
+      -moz-animation : #{$name} #{$duration} #{$timing} #{$delay} #{$iteration} #{$direction};
+        -o-animation : #{$name} #{$duration} #{$timing} #{$delay} #{$iteration} #{$direction};
+           animation : #{$name} #{$duration} #{$timing} #{$delay} #{$iteration} #{$direction};
+ }
+
+ /*
+ * Animation css with custom items
+ * $str = String with all necessary animati
+ * @example @include simpleAnimation('example 1s 3 10s');
+ */
+ @mixin simpleAnimation($str) {
+   -webkit-animation : #{$str};
+      -moz-animation : #{$str};
+        -o-animation : #{$str};
+           animation : #{$str};
+ }
